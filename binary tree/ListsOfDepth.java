@@ -88,15 +88,16 @@ class ListsOfDepth{
 	public static void main(String a[]){
 		Scanner s=new Scanner(System.in);
 		ListsOfDepth obj=new ListsOfDepth();
-		int i=s.nextInt();
-		String str=s.next();
-		while(i!=-1)
+		while(true)
 		{
-			
+			int i=s.nextInt();
+			if(i==-1)
+				break;
+			else{
+			String str=s.next();
 			char[] arr=str.toCharArray();
 			obj.insert(arr,i);
-			i=s.nextInt();
-			str=s.next();
+			}
 		}
 		obj.PrintListsOfDepth();
 	}
