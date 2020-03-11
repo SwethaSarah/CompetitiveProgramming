@@ -55,22 +55,19 @@ class ListsOfDepth{
 				len-=1;
 				node temp=q.remove();
 				llnode newnode=new llnode(temp.data);
-						llnode tem=this.head;
-						if(tem==null){
-							this.head=newnode;
-						}
-						else{
-						while(tem.next!=null)
-							tem=tem.next;
-					    tem.next=newnode;
-						}
+				llnode tem=this.head;
+				if(tem==null){
+					this.head=newnode;
+				}
+				else{
+				    while(tem.next!=null)
+						tem=tem.next;
+					tem.next=newnode;
+				}
 				if(temp.left!=null)
-						
 						q.add(temp.left);
 				if(temp.right!=null)
 						q.add(temp.right);
-				
-				
 			}
 			printlist(this.head);
 			this.head=null;
